@@ -1,0 +1,9 @@
+gearman==2.0.2
+pyasn1==0.1.9
+pycrypto==2.6.1
+pymodbus==1.2.0
+pyModbusTCP==0.0.13
+pyserial==3.0.1
+Twisted==15.5.0
+wheel==0.29.0
+zope.interface==4.1.3
