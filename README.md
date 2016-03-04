@@ -8,7 +8,7 @@ Run gearman
 gearmand
 ```
 
-Run fake modbus server (we need sudo because it open 502 port) 
+Run fake modbus server (we need sudo because it opens 502 port) 
  
 ```
 python backend/server.py
