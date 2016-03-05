@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/gonzalo123/gearman.git",
-                "reference": "f04e3d6decab16f778715e72bf10a125d4baaa74"
+                "reference": "c5c1a6f5f9c7a2b04d0e0bd3a81aa19f3a40beed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gonzalo123/gearman/zipball/f04e3d6decab16f778715e72bf10a125d4baaa74",
-                "reference": "f04e3d6decab16f778715e72bf10a125d4baaa74",
+                "url": "https://api.github.com/repos/gonzalo123/gearman/zipball/c5c1a6f5f9c7a2b04d0e0bd3a81aa19f3a40beed",
+                "reference": "c5c1a6f5f9c7a2b04d0e0bd3a81aa19f3a40beed",
                 "shasum": ""
             },
             "require": {
@@ -50,7 +50,7 @@
             "keywords": [
                 "gearman"
             ],
-            "time": "2016-03-04 21:16:46"
+            "time": "2016-03-05 11:44:25"
         },
         {
             "name": "pimple/pimple",

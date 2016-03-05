@@ -1,5 +1,11 @@
 #!/usr/bin/env python
 
+##
+# Fake modbus server
+# - exposes "Energy" 66706 = [1, 1170]
+# - exposes "Power" 132242 = [2, 1170]
+##
+
 from pymodbus.datastore import ModbusSlaveContext, ModbusServerContext
 from pymodbus.datastore import ModbusSequentialDataBlock
 from pymodbus.server.async import StartTcpServer
