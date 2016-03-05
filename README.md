@@ -11,7 +11,7 @@ gearmand
 Run fake modbus server (we need sudo because it opens 502 port) 
  
 ```
-python backend/server.py
+python backend/fakeServer.py
 ```
 
 Run worker
