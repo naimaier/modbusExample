@@ -4,54 +4,9 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2346a728d67927fa8ddbe02585a0b97b",
-    "content-hash": "7bcf4861d7c113deecd39c05a66cf3c3",
+    "hash": "de38a07e670b637fa581e28d12970d1a",
+    "content-hash": "bc5a879c7b388efe94d080f4a6deefd0",
     "packages": [
-        {
-            "name": "gonzalo123/gearman",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/gonzalo123/gearman.git",
-                "reference": "c5c1a6f5f9c7a2b04d0e0bd3a81aa19f3a40beed"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/gonzalo123/gearman/zipball/c5c1a6f5f9c7a2b04d0e0bd3a81aa19f3a40beed",
-                "reference": "c5c1a6f5f9c7a2b04d0e0bd3a81aa19f3a40beed",
-                "shasum": ""
-            },
-            "require": {
-                "ext-gearman": "*",
-                "php": ">=5.6.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "G\\Gearman\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Gonzalo Ayuso",
-                    "email": "gonzalo123@gmail.com"
-                }
-            ],
-            "description": "gearman client",
-            "keywords": [
-                "gearman"
-            ],
-            "time": "2016-03-05 11:44:25"
-        },
         {
             "name": "pimple/pimple",
             "version": "v1.1.1",
@@ -604,9 +559,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "gonzalo123/gearman": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

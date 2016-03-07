@@ -3,7 +3,6 @@
 include __DIR__ . '/../vendor/autoload.php';
 
 use Silex\Application;
-use G\Gearman\Builder;
 
 $app = new Application(['debug' => true]);
 
@@ -12,12 +11,15 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 ));
 
 $app['modbusReader'] = $app->protect(function() {
-    $client = Builder::createClient();
-    $client->onSuccess(function ($response) {
-        return $response;
-    });
-
-    return json_decode($client->doNormal('modbusReader'), true);
+    $client = new \GearmanClient();
+    $client->addServer();
+    $handle = $client->doNormal('modbusReader', 'modbusReader');
+    $returnCode = $client->returnCode();
+    if ($returnCode != \GEARMAN_SUCCESS) {
+        throw new \Exception($this->client->error(), $returnCode);
+    } else {
+        return json_decode($handle, true);
+    }
 });
 
 $app->get("/", function(Application $app) {
