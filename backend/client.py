@@ -1,21 +1,21 @@
-from pyModbusTCP.client import ModbusClient
+from pymodbus.client.sync import ModbusTcpClient
 import json
 
 def reader():
-    c = ModbusClient(host="localhost", port=502)
+    c = ModbusTcpClient(host="localhost", port=502)
 
-    if not c.is_open() and not c.open():
+    if not c.is_socket_open() and not c.connect():
         print("unable to connect to host")
 
-    if c.is_open():
+    if c.is_socket_open():
 
         holdingRegisters = c.read_holding_registers(1, 4)
 
         # Imagine we've "energy" value in position 1 with two words
-        energy = (holdingRegisters[0] << 16) | holdingRegisters[1]
+        energy = (holdingRegisters.registers[0] << 16) | holdingRegisters.registers[1]
 
         # Imagine we've "power" value in position 3 with two words
-        power = (holdingRegisters[2] << 16) | holdingRegisters[3]
+        power = (holdingRegisters.registers[2] << 16) | holdingRegisters.registers[3]
 
         out = {"energy": energy, "power": power}
 
