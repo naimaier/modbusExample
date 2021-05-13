@@ -1,12 +1,7 @@
 Modbus example
 ==============
 
-I assume you install frontend dependencies (via composer) and backend (via pip)
-
-Run gearman
-```
-gearmand
-```
+Install dependencies via pip
 
 Run fake modbus server (we need sudo because it opens 502 port) 
  
@@ -14,18 +9,7 @@ Run fake modbus server (we need sudo because it opens 502 port)
 python backend/fakeServer.py
 ```
 
-Run worker
- 
+Run client
 ```
-python backend/worker.py
+python backend/client.py
 ```
-
-Start frontend server
-```
-php -S 0.0.0.0:8080 t frontend/www
-```
-
-
-
-
-
