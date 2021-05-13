@@ -1,4 +1,0 @@
-pymodbus==2.5.1
-pyserial==3.5
-Twisted==21.2.0
-zope.interface==5.4.0
