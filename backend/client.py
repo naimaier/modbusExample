@@ -1,8 +1,7 @@
 from pyModbusTCP.client import ModbusClient
-from gearman import GearmanWorker
 import json
 
-def reader(worker, job):
+def reader():
     c = ModbusClient(host="localhost", port=502)
 
     if not c.is_open() and not c.open():
@@ -19,12 +18,10 @@ def reader(worker, job):
         power = (holdingRegisters[2] << 16) | holdingRegisters[3]
 
         out = {"energy": energy, "power": power}
+
+        print(out)
+        
         return json.dumps(out)
     return None
 
-worker = GearmanWorker(['127.0.0.1'])
-
-worker.register_task('modbusReader', reader)
-
-print 'working...'
-worker.work()
+reader()
